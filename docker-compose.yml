@@ -7,6 +7,8 @@ services:
     restart: always
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    env_file:
+      - .env
     environment:
       - POSTGRES_DB=helpdesk_db
       - POSTGRES_USER=admin
